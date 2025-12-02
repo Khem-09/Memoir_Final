@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/memoir_background"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:id="@+id/btnBackAdd"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@android:drawable/ic_media_previous"
+                app:tint="@color/memoir_gold"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Memory"
+                android:textColor="@color/memoir_text_primary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card_white"
+            android:padding="16dp"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:id="@+id/btnAddPhotos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:background="@drawable/bg_gold_rounded"
+                android:layout_marginBottom="12dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@android:drawable/ic_menu_camera"
+                    app:tint="@color/white"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tap to Select Photos"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:layout_marginStart="12dp"/>
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/containerSelectedImages"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textColor="@color/memoir_text_primary"
+            android:layout_marginBottom="5dp"/>
+        <EditText
+            android:id="@+id/etMemoryTitle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_card_white"
+            android:padding="10dp"
+            android:hint="e.g. Summer Vacation"
+            android:textColor="@color/memoir_text_primary"
+            android:textColorHint="@color/memoir_divider"
+            android:layout_marginBottom="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Caption"
+            android:textColor="@color/memoir_text_primary"
+            android:layout_marginBottom="5dp"/>
+        <EditText
+            android:id="@+id/etMemoryCaption"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/bg_card_white"
+            android:padding="10dp"
+            android:gravity="top"
+            android:hint="Write your thoughts..."
+            android:textColor="@color/memoir_text_primary"
+            android:textColorHint="@color/memoir_divider"
+            android:layout_marginBottom="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:textColor="@color/memoir_text_primary"
+            android:layout_marginBottom="5dp"/>
+        <EditText
+            android:id="@+id/etMemoryDate"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_card_white"
+            android:padding="10dp"
+            android:hint="Select Date"
+            android:focusable="false"
+            android:clickable="true"
+            android:drawableRight="@android:drawable/ic_menu_my_calendar"
+            android:drawableTint="@color/memoir_gold"
+            android:textColor="@color/memoir_text_primary"
+            android:textColorHint="@color/memoir_divider"
+            android:layout_marginBottom="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Album"
+            android:textColor="@color/memoir_text_primary"
+            android:layout_marginBottom="5dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerAlbums"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_card_white"
+            android:layout_marginBottom="30dp"/>
+
+        <Button
+            android:id="@+id/btnSaveMemory"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Save to Vault"
+            android:backgroundTint="@color/memoir_gold"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+</ScrollView>
