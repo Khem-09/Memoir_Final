@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginBottom="24dp"
+    android:layout_marginHorizontal="16dp"
+    android:background="@drawable/bg_card_white"
+    android:elevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@android:drawable/sym_def_app_icon"
+            android:padding="8dp"
+            android:background="@drawable/circle_gold_border"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="10dp">
+
+            <TextView
+                android:id="@+id/tvItemTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Memory Title"
+                android:textColor="@color/memoir_text_primary"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tvItemDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2023-10-25"
+                android:textColor="@color/memoir_teal"
+                android:textSize="12sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPagerMemory"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:background="@color/memoir_divider"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayoutDots"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        app:tabBackground="@drawable/selector_dot"
+        app:tabIndicatorHeight="0dp"
+        app:tabGravity="center"
+        app:tabPaddingStart="8dp"
+        app:tabPaddingEnd="8dp"
+        android:background="@android:color/transparent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvItemCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Travel"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_gold_rounded"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tvItemCaption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This is the caption..."
+            android:textColor="@color/memoir_text_primary"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+</LinearLayout>

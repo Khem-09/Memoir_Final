@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/memoir_background"
+    android:padding="20dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
+
+        <ImageView
+            android:id="@+id/btnBackTimeline"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@android:drawable/ic_media_previous"
+            android:layout_centerVertical="true"
+            app:tint="@color/memoir_gold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Timeline"
+            android:textColor="@color/memoir_text_primary"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_card_white"
+        android:padding="10dp"
+        android:layout_marginBottom="20dp"
+        android:elevation="2dp">
+
+        <CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weekDayTextAppearance="@style/TextAppearance.AppCompat.Small"
+            android:dateTextAppearance="@style/TextAppearance.AppCompat.Medium"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvTimelineLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Memories on this day:"
+        android:textColor="@color/memoir_teal"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerTimeline"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>
